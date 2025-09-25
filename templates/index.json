@@ -1,0 +1,283 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_XVKrVK": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_PpCXtA": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/hb3.avif",
+            "image_overlay_opacity": 0,
+            "heading": "<strong>MORE THAN JUST SHOES - ITS A PART OF YOUR STORY.</strong>",
+            "heading_size": "h1",
+            "subheading": "Original sneakers from Nike and other top brands that make every step feel special.",
+            "button_label": "Shop the Collection",
+            "link": "shopify://collections",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "text_alignment_mobile": "left",
+            "color_scheme": "scheme-1"
+          }
+        },
+        "slide_qLDHzU": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/hb1.avif",
+            "image_overlay_opacity": 0,
+            "heading": "<strong>MORE THAN JUST SHOES - ITS A PART OF YOUR STORY.</strong>",
+            "heading_size": "h1",
+            "subheading": "Original sneakers from Nike and other top brands that make every step feel special.",
+            "button_label": "Shop the Collection",
+            "link": "shopify://collections",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "text_alignment_mobile": "left",
+            "color_scheme": "scheme-1"
+          }
+        },
+        "slide_ye7Rqc": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/hb2.avif",
+            "image_overlay_opacity": 0,
+            "heading": "<strong>MORE THAN JUST SHOES - ITS A PART OF YOUR STORY.</strong>",
+            "heading_size": "h1",
+            "subheading": "Original sneakers from Nike and other top brands that make every step feel special.",
+            "button_label": "Shop the Collection",
+            "link": "shopify://collections",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "text_alignment_mobile": "left",
+            "color_scheme": "scheme-1"
+          }
+        }
+      },
+      "block_order": [
+        "slide_PpCXtA",
+        "slide_qLDHzU",
+        "slide_ye7Rqc"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "large",
+        "slider_visual": "dots",
+        "auto_rotate": true,
+        "change_slides_speed": 3,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Browse our latest products",
+            "heading_size": "h0"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "Contact Us",
+            "button_link_2": "shopify://policies/privacy-policy",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/city-woman-fashion_925x_2x_9563975b-2d7e-4b35-968e-11596db5acd2.jpg",
+        "image_2": "shopify://shop_images/woman-in-the-city_925x_a239ce33-0ff1-4c54-9162-594c5b6cb790.jpg",
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "image_behavior": "none",
+        "desktop_content_position": "bottom-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-3",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "all",
+        "products_to_show": 8,
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "featured_product_zPYEFE": {
+      "type": "featured-product",
+      "blocks": {
+        "text_VQMnft": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_64cYKq": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_ENAzgb": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_rW8hV3": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_z7ebjK": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_TzEtdA": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_mdrGDJ": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_VQMnft",
+        "title_64cYKq",
+        "price_ENAzgb",
+        "variant_picker_rW8hV3",
+        "quantity_selector_z7ebjK",
+        "buy_buttons_TzEtdA",
+        "share_mdrGDJ"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "classic-leather-jacket",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collage_PMQ7cy": {
+      "type": "collage",
+      "blocks": {
+        "image_EDyhjr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/smiling-woman-poses_925x_4f2b4ab3-ffbd-470a-9a14-73b6eff2730b.jpg"
+          }
+        },
+        "product_GFnjDq": {
+          "type": "product",
+          "settings": {
+            "product": "olive-green-jacket",
+            "second_image": false
+          }
+        },
+        "collection_U3MUCG": {
+          "type": "collection",
+          "settings": {
+            "collection": "most-popular-product"
+          }
+        }
+      },
+      "block_order": [
+        "image_EDyhjr",
+        "product_GFnjDq",
+        "collection_U3MUCG"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "Multimedia collage",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "call_to_action_kT9rmA": {
+      "type": "call-to-action",
+      "name": "Call to Action",
+      "settings": {
+        "pre-order-title": "Pre-order now!",
+        "pre-order-text": "Lorem ipsum"
+      }
+    }
+  },
+  "order": [
+    "slideshow_XVKrVK",
+    "image_banner",
+    "featured_collection",
+    "featured_product_zPYEFE",
+    "collage_PMQ7cy",
+    "call_to_action_kT9rmA"
+  ]
+}
