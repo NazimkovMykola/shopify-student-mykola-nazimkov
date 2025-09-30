@@ -1,0 +1,456 @@
+{% style %}
+  .product-{{ section_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 80px 5%;
+    gap: 5%;
+
+    .product__viewer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+
+      .product__viewer__thumbs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 1.5rem;
+
+        img {
+          width: 88px;
+          height: 88px;
+          min-width: 88px;
+          min-height: 88px;
+          object-fit: cover;
+          border-radius: 8px;
+          cursor: pointer;
+
+          &:not(:last-child) {
+            margin-bottom: 1.5rem;
+          }
+
+          &:first-child {
+            filter: brightness(0.7);
+          }
+        }
+      }
+
+      .product__viewer__main-img-wrapper {
+        position: relative;
+
+        .product__viewer__main-img-wrapper__overlay {
+          position: absolute;
+          top: 16px;
+          left: 16px;
+          background-color: #fff;
+          border-radius: 4px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
+          padding: 0.5rem;
+
+          svg {
+            margin-right: 0.75rem;
+          }
+
+          span {
+            font-family: Poppins, sans-serif;
+            font-style: normal;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            color: #111;
+          }
+        }
+
+        img {
+          width: 536px;
+          max-width: 100%;
+          height: auto;
+          max-height: 536px;
+        }
+      }
+    }
+
+    h2 {
+      font-family: Poppins, sans-serif;
+      font-style: normal;
+      font-size: 30px;
+      line-height: 36px;
+      font-weight: 400;
+      margin-bottom: 0.75rem;
+      color: #111;
+    }
+
+    .product__details__price {
+      font-family: Poppins, sans-serif;
+      font-style: normal;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      display: block;
+      margin-bottom: 2rem;
+      color: #737373;
+    }
+    .product__details__tooltip {
+      position: absolute;
+      position-anchor: --my-tooltip;
+      display: none;
+      position-area: top right;
+      color: black;
+      background-color: grey;
+      padding: 1rem;
+      border-radius: 6px;
+    }
+    .product__details__tooltip--active {
+      display: block;
+    }
+    .product__details__select-color {
+      margin-bottom: 2rem;
+
+      button {
+        width: 88px;
+        height: 88px;
+        border-radius: 8px;
+        cursor: pointer;
+        border: 1px solid transparent;
+        anchor-name: --my-tooltip;
+
+        img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 8px;
+        }
+
+        &:not(:last-child) {
+          margin-right: 0.5rem;
+        }
+
+        &:first-child {
+          border-color: #111;
+        }
+
+        &:hover {
+          transform: translateY(-3px);
+        }
+      }
+    }
+    .
+    .product__details__select-size {
+      margin-bottom: 2rem;
+
+      span {
+        display: block;
+        margin-bottom: 0.75rem;
+        font-family: Poppins, sans-serif;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #111;
+      }
+
+      div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0.5rem;
+
+        button {
+          border: 1px solid #ebebeb;
+          background-color: #fff;
+          border-radius: 8px;
+          padding: 1rem;
+          cursor: pointer;
+          font-family: Poppins, sans-serif;
+          font-style: normal;
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 400;
+          color: #111;
+
+          &:hover {
+            background-color: #ebebeb;
+          }
+
+          &:nth-child(2) {
+            border: 1px solid #111111;
+          }
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      background-color: #111;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 2rem;
+
+      &:hover {
+        transform: translateY(-3px);
+      }
+
+      button {
+        cursor: pointer;
+        border: none;
+        font-family: Poppins, sans-serif;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        padding: 16px 32px;
+        border-radius: 8px;
+        background-color: #111;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+
+    p {
+      font-family: Poppins, sans-serif;
+      font-style: normal;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      color: #737373;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 949px) {
+      .product__details__select-size div button {
+        font-family: Poppins, sans-serif;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      padding: 60px 5%;
+      grid-template-columns: 1fr;
+      gap: 0;
+
+      h2 {
+        font-family: Poppins, sans-serif;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 400;
+        margin-bottom: 0.75rem;
+      }
+
+      .product__details__price {
+        margin-bottom: 1.5rem;
+      }
+
+      .product__viewer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+
+        .product__viewer__main-img-wrapper {
+          margin-bottom: 1rem;
+
+          img {
+            width: calc(100vw - 5%);
+            height: auto;
+          }
+        }
+
+        .product__viewer__thumbs {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+          gap: 8px;
+          margin-right: 0;
+          margin-bottom: 1.5rem;
+
+          img {
+            width: 100%;
+            min-width: 100%;
+            height: auto;
+            aspect-ratio: 1/1;
+            min-height: auto;
+            object-fit: cover;
+
+            &:not(:last-child) {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+
+      .product__details__select-color,
+      .product__details__select-size {
+        margin-bottom: 1.5rem;
+      }
+
+      .product__details__select-size div {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .form {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+{% endstyle %}
+
+{% assign product = all_products[handle] %}
+
+<section class="product-{{ section_id }}">
+  <div class="product__viewer">
+    <div class="product__viewer__thumbs">
+      {% for image in product.images limit: 5 %}
+        <img src="{{ image | img_url: 'master' }}" alt="{{ image.alt | escape }}">
+      {% endfor %}
+    </div>
+    <div class="product__viewer__main-img-wrapper">
+      <div class="product__viewer__main-img-wrapper__overlay">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M5.99999 9.07213L3.11569 10.6666L3.66666 7.28949L1.33333 4.89805L4.55784 4.40571L5.99999 1.33325L7.44215 4.40571L10.6667 4.89805L8.33333 7.28949L8.8843 10.6666L5.99999 9.07213Z"
+            fill="#111111" stroke="#111111" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span>Highly Rated</span>
+      </div>
+      <img
+        class="product__viewer__main-img"
+        src="{{ product.featured_image | img_url: 'master' }}"
+        alt="{{ product.title }}"
+        loading="lazy"
+      >
+    </div>
+  </div>
+  <div class="product__details">
+    <h2>{{ product.title }}</h2>
+    <span class="product__details__price">{{ product.price | money }} </span>
+    <div class="product__details__select-color">
+      <div class="product__details__tooltip"></div>
+      {% for variant in product.variants %}
+        <button
+          class="{% if forloop.first %}product__details__select-color--active{% endif %}"
+          id="{{ variant.title }}"
+          aria-label="select {{ variant.title | downcase  }} color"
+        >
+          <img
+            src="{{ variant.image | img_url: 'master' }}"
+            alt="{{ variant.title }}"
+          >
+        </button>
+      {% endfor %}
+    </div>
+    <div class="product__details__select-size">
+      <span>Select Size:</span>
+      <div>
+        <button aria-label="select size">UK 5.5</button>
+        <button aria-label="select size">UK 6 (EU 39)</button>
+        <button aria-label="select size">UK 6 (EU 40)</button>
+        <button aria-label="select size">UK 6.5</button>
+        <button aria-label="select size">UK 7</button>
+        <button aria-label="select size">UK 7.5</button>
+      </div>
+    </div>
+    <form method="post" action="/cart/add" id="add-to-cart-{{ product.id }}">
+      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+      <input type="hidden" name="quantity" value="1">
+      <button type="submit">Add To Bag</button>
+    </form>
+    <p>{{ product.description }}</p>
+  </div>
+</section>
+
+<script>
+const COLORS = {
+  white: "w",
+  black: "b",
+  pink: "p",
+};
+
+ const ACTIVE_FILTER_STYLE = "brightness(0.7)";
+ const ACTIVE_BORDER_COLOR = "black";
+ const NOT_ACTIVE_BORDER_COLOR = "#EBEBEB";
+
+  const changeMainImage = (el, src) => {
+    el.src = src;
+  };
+
+  const changePriceValue = (priceEl) => {
+    priceEl.textContent = `$ ${(
+      Math.floor(Math.random() * (320 - 180 + 1)) + 180
+    ).toFixed(2)}`;
+  };
+
+  const changeActiveButtonSize = (buttonsSizeArr) => {
+    const activeButtonIndex = Math.floor(Math.random() * 6);
+    buttonsSizeArr.forEach(
+      (btn) => (btn.style.borderColor = NOT_ACTIVE_BORDER_COLOR)
+    );
+    buttonsSizeArr[activeButtonIndex].style.borderColor = ACTIVE_BORDER_COLOR;
+  };
+
+  //SELECT MAIN IMG
+  const productThumbs = document.querySelector(".product__viewer__thumbs");
+  const images = productThumbs.querySelectorAll("img");
+  const mainImage = document.querySelector(".product__viewer__main-img");
+  const priceElement = document.querySelector(".product__details__price");
+  const buttonsSizeArr = document.querySelectorAll(
+    'button[aria-label="select size"]'
+  );
+
+  images.forEach((img) => {
+    img.addEventListener("click", (e) => {
+      changeMainImage(mainImage, img.src);
+      changePriceValue(priceElement);
+      changeActiveButtonSize(buttonsSizeArr);
+      images.forEach((el) => (el.style.filter = "unset"));
+      e.target.style.filter = ACTIVE_FILTER_STYLE;
+    });
+  });
+
+  const changeProductThumbs = (currentColor) => {
+    images.forEach((el) => (el.style.filter = "unset"));
+    images[0].style.filter = ACTIVE_FILTER_STYLE;
+    images.forEach((img, index) => {
+      img.src = `/img/product/${COLORS[currentColor]}${index + 1}.avif`;
+    });
+    mainImage.src = `/img/product/${COLORS[currentColor]}1.avif`;
+  };
+
+  // SELECT COLOR
+  const selectColorContainer = document.querySelector(
+    ".product__details__select-color"
+  );
+
+  if (selectColorContainer) {
+    const btns = selectColorContainer.querySelectorAll("button");
+    btns.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        const id = e.currentTarget.id;
+        const variant = {{ product.variants | json }}.find(v => v.title == id);
+        const variantInventory = {
+        {% for variant in product.variants %}
+        {{ variant.title }}: {{ variant.inventory_quantity }}{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+         };
+        const quantity = variantInventory[id];
+        const tooltip = document.querySelector('.product__details__tooltip');
+        tooltip.textContent = quantity > 0 ? `Доступно ${quantity} пар` : 'Не доступно';
+       tooltip.classList.add('product__details__tooltip--active');
+        btns.forEach((btn) => {
+          if (btn.id !== id) {
+            btn.style.borderColor = "transparent";
+          } else {
+            btn.style.borderColor = ACTIVE_BORDER_COLOR;
+          }
+        });
+      });
+    });
+  }
+</script>
